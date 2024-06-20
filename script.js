@@ -142,7 +142,7 @@ document.addEventListener('DOMContentLoaded', () => {
             .catch(error => {
                 console.log('Error fetching public holidays:', error);
                 holidaysOutput.innerHTML = `<p>${error.message}</p>`;
-                checkIfWeekend(dateInput.value); // Ensure weekend check is called even on error
+                checkIfWeekend(dateInput.value); 
             });
     }
 
