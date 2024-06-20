@@ -1,0 +1,169 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: white; 
+  color: #333;
+}
+
+
+body.dark-mode {
+  background-color: #333; 
+  color: white; 
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #1e90ff; 
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+
+.dark-mode h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #1e90ff; 
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+button, input, select {
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  cursor: pointer;
+}
+
+#randomize-button {
+  font-size: 2rem; /* Larger font size */
+  font-weight: bold;
+  padding: 15px 30px; /* Larger padding */
+  background: linear-gradient(to right, #ef5350, #f48fb1, #7e57c2, #2196f3, #26c6da, #43a047, #eeff41, #f9a825, #ff5722);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.dark-mode #randomize-button {
+  -webkit-text-fill-color: transparent;
+}
+
+select {
+  background-color: rgb(107, 234, 251);
+}
+
+form input.date {
+  background-color: #ecf0b5;
+}
+
+.checkHoliday-button {
+  width: 150px;
+  height: 25px;
+  background-color: #a692ff;
+}
+
+form label {
+  text-shadow: 2px 2px 5px rgb(240, 162, 7);
+}
+
+.rainbow-button {
+  margin-top: 0px;
+  margin-bottom: 10px;
+  font-family: sans-serif;
+  font-size: 2rem;
+  background: linear-gradient(to right, #ef5350, #f48fb1, #7e57c2, #2196f3, #26c6da, #43a047, #eeff41, #f9a825, #ff5722);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+a:link {
+  color: red;
+}
+
+a:visited {
+  color: green;
+}
+
+a:hover {
+  color: hotpink;
+}
+
+a:active {
+  color: blue;
+}
+
+table.table-2 {
+  color: rgb(7, 128, 110)
+}
+
+.dark-mode select, .dark-mode input.date, .dark-mode button {
+  background-color: #555;
+  color: white;
+  border: 1px solid #888;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+#events-small-image {
+  height: 130px;
+  max-width: 125px;
+  margin: 20px;
+  display: block;
+  float: left;
+}
+
+#country-image {
+  max-width: 450px;
+  margin: 20px 0;
+  display: block;
+}
+
+
+.holidays-image {
+  height: 100px;
+  max-width: 175px;
+  margin: 20px;
+  display: block;
+}
+
+
+.travel-image img {
+  height: 190px;
+  max-width: 275px;
+  margin: 20px;
+  display: block;
+  float: right;
+}
+
+
+
+#scroll-to-top {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #555;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#scroll-to-top:hover {
+  background-color: #333;
+}

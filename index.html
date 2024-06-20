@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Holiday and Event Checker</title>
+  <link rel="stylesheet" type="text/css" href="./styles.css">
+</head>
+<body>
+  <div class="container">
+  <button id="theme-toggle">Toggle Dark Mode</button>
+  <h1>Holiday and Event Checker</h1>
+  <button id="randomize-button" class="rainbow-button">Randomize Date and Country</button>
+  <form>
+    <div>
+      <label for="date-input" style="font-size: 1.5em; font-weight: bold;">Date</label><span style="color: red !important; display: inline; float: none;margin-right: 50px;">*</span>
+      <input class="date" id="date-input" name="date-input" type="date">
+    </div>
+    <div>
+      <label for="country-select" style="font-size: 1.5em; font-weight: bold;">Select a Country/Region</label><span style="color: red !important; display: inline; float: none; margin-right: 50px;">*</span>
+      <select id="country-select" name="country" class="form-control">
+              <option value="AD">Andorra</option>
+              <option value="AL">Albania</option>
+              <option value="AM">Armenia</option>
+              <option value="AR">Argentina</option>
+              <option value="AT">Austria</option>
+              <option value="AU">Australia</option>
+              <option value="AX">Åland Islands</option>
+              <option value="BA">Bosnia and Herzegovina</option>
+              <option value="BB">Barbados</option>
+              <option value="BE">Belgium</option>
+              <option value="BG">Bulgaria</option>
+              <option value="BJ">Benin</option>
+              <option value="BO">Bolivia</option>
+              <option value="BR">Brazil</option>
+              <option value="BS">Bahamas</option>
+              <option value="BW">Botswana</option>
+              <option value="BY">Belarus</option>
+              <option value="BZ">Belize</option>
+              <option value="CA">Canada</option>
+              <option value="CH">Switzerland</option>
+              <option value="CL">Chile</option>
+              <option value="CN">China</option>
+              <option value="CO">Colombia</option>
+              <option value="CR">Costa Rica</option>
+              <option value="CU">Cuba</option>
+              <option value="CY">Cyprus</option>
+              <option value="CZ">Czechia</option>
+              <option value="DE">Germany</option>
+              <option value="DK">Denmark</option>
+              <option value="DO">Dominican Republic</option>
+              <option value="EC">Ecuador</option>
+              <option value="EE">Estonia</option>
+              <option value="EG">Egypt</option>
+              <option value="ES">Spain</option>
+              <option value="FI">Finland</option>
+              <option value="FO">Faroe Islands</option>
+              <option value="FR">France</option>
+              <option value="GA">Gabon</option>
+              <option value="GB">United Kingdom</option>
+              <option value="GD">Grenada</option>
+              <option value="GE">Georgia</option>
+              <option value="GG">Guernsey</option>
+              <option value="GI">Gibraltar</option>
+              <option value="GL">Greenland</option>
+              <option value="GM">Gambia</option>
+              <option value="GR">Greece</option>
+              <option value="GT">Guatemala</option>
+              <option value="GY">Guyana</option>
+              <option value="HK">Hong Kong</option>
+              <option value="HN">Honduras</option>
+              <option value="HR">Croatia</option>
+              <option value="HT">Haiti</option>
+              <option value="HU">Hungary</option>
+              <option value="ID">Indonesia</option>
+              <option value="IE">Ireland</option>
+              <option value="IM">Isle of Man</option>
+              <option value="IS">Iceland</option>
+              <option value="IT">Italy</option>
+              <option value="JE">Jersey</option>
+              <option value="JM">Jamaica</option>
+              <option value="JP">Japan</option>
+              <option value="KR">South Korea</option>
+              <option value="KZ">Kazakhstan</option>
+              <option value="LI">Liechtenstein</option>
+              <option value="LS">Lesotho</option>
+              <option value="LT">Lithuania</option>
+              <option value="LU">Luxembourg</option>
+              <option value="LV">Latvia</option>
+              <option value="MA">Morocco</option>
+              <option value="MC">Monaco</option>
+              <option value="MD">Moldova</option>
+              <option value="ME">Montenegro</option>
+              <option value="MG">Madagascar</option>
+              <option value="MK">North Macedonia</option>
+              <option value="MN">Mongolia</option>
+              <option value="MS">Montserrat</option>
+              <option value="MT">Malta</option>
+              <option value="MX">Mexico</option>
+              <option value="MZ">Mozambique</option>
+              <option value="NA">Namibia</option>
+              <option value="NE">Niger</option>
+              <option value="NG">Nigeria</option>
+              <option value="NI">Nicaragua</option>
+              <option value="NL">Netherlands</option>
+              <option value="NO">Norway</option>
+              <option value="NZ">New Zealand</option>
+              <option value="PA">Panama</option>
+              <option value="PE">Peru</option>
+              <option value="PG">Papua New Guinea</option>
+              <option value="PL">Poland</option>
+              <option value="PR">Puerto Rico</option>
+              <option value="PT">Portugal</option>
+              <option value="PY">Paraguay</option>
+              <option value="RO">Romania</option>
+              <option value="RS">Serbia</option>
+              <option value="RU">Russia</option>
+              <option value="SE">Sweden</option>
+              <option value="SG">Singapore</option>
+              <option value="SI">Slovenia</option>
+              <option value="SJ">Svalbard and Jan Mayen</option>
+              <option value="SK">Slovakia</option>
+              <option value="SM">San Marino</option>
+              <option value="SR">Suriname</option>
+              <option value="SV">El Salvador</option>
+              <option value="TN">Tunisia</option>
+              <option value="TR">Turkey</option>
+              <option value="UA">Ukraine</option>
+              <option value="US">United States</option>
+              <option value="UY">Uruguay</option>
+              <option value="VA">Vatican City</option>
+              <option value="VE">Venezuela</option>
+              <option value="VN">Vietnam</option>
+              <option value="ZA">South Africa</option>
+              <option value="ZW">Zimbabwe</option>
+              <option value="No Available Holiday Information" disabled>No available holiday information for countries not listed above</option>
+              <option value="Afghanistan">Afghanistan (no holiday info)</option>
+              <option value="Algeria">Algeria (no holiday info)</option>
+              <option value="Angola">Angola (no holiday info)</option>
+              <option value="Antigua and Barbuda">Antigua and Barbuda (no holiday info)</option>
+              <option value="Azerbaijan">Azerbaijan (no holiday info)</option>
+              <option value="Bahrain">Bahrain (no holiday info)</option>
+              <option value="Bangladesh">Bangladesh (no holiday info)</option>
+              <option value="Bhutan">Bhutan (no holiday info)</option>
+              <option value="Brunei">Brunei (no holiday info)</option>
+              <option value="Burkina Faso">Burkina Faso (no holiday info)</option>
+              <option value="Burundi">Burundi (no holiday info)</option>
+              <option value="Cape Verde">Cape Verde (no holiday info)</option>
+              <option value="Cambodia">Cambodia (no holiday info)</option>
+              <option value="Cameroon">Cameroon (no holiday info)</option>
+              <option value="Central African Republic">Central African Republic (no holiday info)</option>
+              <option value="Chad">Chad (no holiday info)</option>
+              <option value="Comoros">Comoros (no holiday info)</option>
+              <option value="Democratic Republic of the Congo">Democratic Republic of the Congo (no holiday info)</option>
+              <option value="Djibouti">Djibouti (no holiday info)</option>
+              <option value="Dominica">Dominica (no holiday info)</option>
+              <option value="East Timor">East Timor (no holiday info)</option>
+              <option value="Equatorial Guinea">Equatorial Guinea (no holiday info)</option>
+              <option value="Eritrea">Eritrea (no holiday info)</option>
+              <option value="eSwatini">eSwatini (no holiday info)</option>
+              <option value="Ethiopia">Ethiopia (no holiday info)</option>
+              <option value="Federated States of Micronesia">Federated States of Micronesia (no holiday info)</option>
+              <option value="Fiji">Fiji (no holiday info)</option>
+              <option value="Ghana">Ghana (no holiday info)</option>
+              <option value="Guinea">Guinea (no holiday info)</option>
+              <option value="Guinea-Bissau">Guinea-Bissau (no holiday info)</option>
+              <option value="India">India (no holiday info)</option>
+              <option value="Iran">Iran (no holiday info)</option>
+              <option value="Iraq">Iraq (no holiday info)</option>
+              <option value="Israel">Israel (no holiday info)</option>
+              <option value="Ivory Coast">Ivory Coast (no holiday info)</option>
+              <option value="Jordan">Jordan (no holiday info)</option>
+              <option value="Kenya">Kenya (no holiday info)</option>
+              <option value="Kiribati">Kiribati (no holiday info)</option>
+              <option value="Kuwait">Kuwait (no holiday info)</option>
+              <option value="Kyrgyzstan">Kyrgyzstan (no holiday info)</option>
+              <option value="Laos">Laos (no holiday info)</option>
+              <option value="Lebanon">Lebanon (no holiday info)</option>
+              <option value="Liberia">Liberia (no holiday info)</option>
+              <option value="Libya">Libya (no holiday info)</option>
+              <option value="Malawi">Malawi (no holiday info)</option>
+              <option value="Malaysia">Malaysia (no holiday info)</option>
+              <option value="Maldives">Maldives (no holiday info)</option>
+              <option value="Mali">Mali (no holiday info)</option>
+              <option value="Marshall Islands">Marshall Islands (no holiday info)</option>
+              <option value="Mauritania">Mauritania (no holiday info)</option>
+              <option value="Mauritius">Mauritius (no holiday info)</option>
+              <option value="Myanmar">Myanmar (no holiday info)</option>
+              <option value="Nauru">Nauru (no holiday info)</option>
+              <option value="Nepal">Nepal (no holiday info)</option>
+              <option value="North Korea">North Korea (no holiday info)</option>
+              <option value="Oman">Oman (no holiday info)</option>
+              <option value="Pakistan">Pakistan (no holiday info)</option>
+              <option value="Palau">Palau (no holiday info)</option>
+              <option value="Palestinian National Authority">Palestinian National Authority (no holiday info)</option>
+              <option value="Philippines">Philippines (no holiday info)</option>
+              <option value="Qatar">Qatar (no holiday info)</option>
+              <option value="Republic of the Congo">Republic of the Congo (no holiday info)</option>
+              <option value="Rwanda">Rwanda (no holiday info)</option>
+              <option value="Saint Kitts and Nevis">Saint Kitts and Nevis (no holiday info)</option>
+              <option value="Saint Lucia">Saint Lucia (no holiday info)</option>
+              <option value="Saint Vincent and the Grenadines">Saint Vincent and the Grenadines (no holiday info)</option>
+              <option value="Samoa">Samoa (no holiday info)</option>
+              <option value="Saudi Arabia">Saudi Arabia (no holiday info)</option>
+              <option value="Senegal">Senegal (no holiday info)</option>
+              <option value="Seychelles">Seychelles (no holiday info)</option>
+              <option value="Sierra Leone">Sierra Leone (no holiday info)</option>
+              <option value="Solomon Islands">Solomon Islands (no holiday info)</option>
+              <option value="Somalia">Somalia (no holiday info)</option>
+              <option value="South Sudan">South Sudan (no holiday info)</option>
+              <option value="Sri Lanka">Sri Lanka (no holiday info)</option>
+              <option value="Sudan">Sudan (no holiday info)</option>
+              <option value="Syria">Syria (no holiday info)</option>
+              <option value="São Tomé and Príncipe">São Tomé and Príncipe (no holiday info)</option>
+              <option value="Tajikistan">Tajikistan (no holiday info)</option>
+              <option value="Tanzania">Tanzania (no holiday info)</option>
+              <option value="Thailand">Thailand (no holiday info)</option>
+              <option value="Togo">Togo (no holiday info)</option>
+              <option value="Tonga">Tonga (no holiday info)</option>
+              <option value="Trinidad and Tobago">Trinidad and Tobago (no holiday info)</option>
+              <option value="Turkmenistan">Turkmenistan (no holiday info)</option>
+              <option value="Tuvalu">Tuvalu (no holiday info)</option>
+              <option value="Uganda">Uganda (no holiday info)</option>
+              <option value="United Arab Emirates">United Arab Emirates (no holiday info)</option>
+              <option value="Uzbekistan">Uzbekistan (no holiday info)</option>
+              <option value="Vanuatu">Vanuatu (no holiday info)</option>
+              <option value="Yemen">Yemen (no holiday info)</option>
+              <option value="Zambia">Zambia (no holiday info)</option>
+        </select>
+        </div>
+  </form>
+  <div class="info-text" style="font-size: 0.9em; color: #e48118; padding: 10px;">
+    <img id="events-small-image" src="./assets/Image/On-this-day-in-history.jpg" alt="Historical Events Small" class="left-img">
+    Holiday information is currently limited to the countries listed above that do not have the "(no holiday info)" notation next to them. Countries with this notation are not supported at the moment.<br><br>
+    The holiday checker only accepts dates between the years 1974 and 2074. When using the randomize button, the generated dates will always fall within this supported range.<br><br>
+    Please keep in mind that the country information data used on this website was last updated in 2023.<br><br>
+    The information about historical events includes links to Wikipedia articles.
+  </div>
+  <div id="events-output"></div>
+  <h2>Country Information</h2>
+  <div id="countryInfo">
+    <img id="country-image" src="./assets/Image/world.jpg" alt="Country Info">
+  </div>
+  <div id="country-info-output">
+    <table class="table-1">
+    </table>
+  </div>
+  <div id="holidays-output"></div>
+  <div class="holidays-image">
+    <img src="./assets/Image/holiday-mood.jpg" alt="Holiday">
+  </div>
+  <h3 style="color: rgb(7, 128, 110)">Public Holiday Information Model</h3>
+  <div class="travel-image"> 
+    <img src="./assets/Image/travel.jpg" alt="Travel"> 
+  </div>
+  <table class="table-2">
+      <tr>
+        <th>date</th>
+        <td>The date of the holiday</td>
+      </tr>
+      <tr>
+        <th>localName</th>  
+        <td>Local name</td>      
+      </tr>  
+      <tr>
+        <th>name</th>
+        <td>English name</td>
+      </tr>
+        <tr>
+        <th>countryCode</th>
+        <td>ISO 3166-1 alpha-2</td>
+      </tr>
+        <tr>
+        <th>fixed</th>
+        <td>Is this public holiday every year on the same date</td>
+      </tr>
+      <tr>
+        <th>global</th>  
+        <td>Is this public holiday in every county (federal state)</td>      
+      </tr> 
+      <tr>
+        <th>counties</th>  
+        <td>If it is not global you found here the Federal states (ISO-3166-2)</td>      
+      </tr> 
+      <tr>
+        <th>launchYear</th>  
+        <td>The launch year of the public holiday</td>      
+      </tr> 
+      <tr>
+        <th>types</th>  
+        <td>The types of the public holiday, several possible
+      •	Public
+      •	Bank (Bank holiday, banks and offices are closed)
+      •	School (School holiday, schools are closed)
+      •	Authorities (Authorities are closed)
+      •	Optional (Majority of people take a day off)
+      •	Observance (Optional festivity, no paid day off)</td>      
+      </tr>
+    </table>
+  </div>
+  <button id="scroll-to-top" title="Go to top">↑</button>  
+  <script src="./script.js"></script>
+</body>
+</html>
